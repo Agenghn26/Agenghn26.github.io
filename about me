@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
+    <h1>ABOUT ME</h1>
+    <p>Berikut merupakan data diri saya</p>
+    <table>
+            <tr>
+              <th>Nama</th>
+              <th>NIM</th>
+              <th>Universitas</th>
+              <th>Fakultas</th>
+              <th>Program Studi</th>
+            </tr>
+            <tr>
+              <td>Muhammad Ageng Hari Nugroho</td>
+              <td>220709009</td>
+              <td>Universitas Sumatera Utara</td>
+              <td>Ilmu Budaya</td>
+              <td>Perpustakaan dan Sains Informasi</td>
+            </tr>
+    </table>
+</body>
+</html> 
