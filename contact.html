@@ -3,53 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir</title>
+    <title>Formulir Kontak</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
-        label, input, textarea {
+
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        label {
             display: block;
-            width: 35%;
-            margin-bottom: 20px;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
         }
+
         input, textarea {
-            padding: 2px;
-            border: 2px solid;
-            border-radius: 2px;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
+
         button {
-            background-color: black;
+            background-color: #0288D1;
             color: white;
-            padding: 2px;
             border: none;
-            border-radius: 2px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 15px;
             cursor: pointer;
+            font-size: 16px;
         }
+
         button:hover {
-            background-color: Dark blue;
+            background-color: #026aa7;
+        }
+
+        .success-message {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Formulir</h2>
-    <p>Jika ingin meninggalkan pesan dan kesan untuk saya, dapat mengisi formulir dibawah ini ya!</p>
-        <form action="#" method="post">
+
+    <div class="form-container">
+        <h2>Formulir Kontak</h2>
+        <form id="contactForm">
             <label for="email">Email:</label>
-            <input type="email" id="nama" name="email" required>
-            
-            <label for="No. HP/WA">No. HP/WA:</label>
-            <input type="No. HP/WA" id="No. Hp/WA" name="No. Hp/WA" required>
-            
-            <label for="pesan">Pesan:</label>
-            <textarea id="pesan" name="pesan" rows="3" required></textarea>
-            
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">No. HP:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
             <button type="submit">Kirim</button>
+            <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
         </form>
     </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah halaman refresh setelah submit
+
+            // Menampilkan pesan sukses
+            document.getElementById("successMessage").style.display = "block";
+
+            // Mengosongkan input setelah dikirim
+            this.reset();
+        });
+    </script>
+
 </body>
-    <h3>Back to Homepage</h3>
-    <a href="https://agenghn26.github.io/">Homepage</a>
 </html>
