@@ -4,57 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Kontak</title>
- <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-  background-color: #0288D1;
-  padding: 15px;
-  text-align: center;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #FFEB3B;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: Right;
-  display: block;
-  color: #4F959D;
-  text-align: center;
-  padding: 12px 14px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h1>Perpustakaan AGENGHN</h1>
-</div>
-
-<div class="topnav">
-  <a href="aboutme.html">ABOUT ME</a>
-  <a href="index.html">HOME PAGE</a>
-</div>
-</body>
-    
     <style>
         * {
             box-sizing: border-box;
@@ -66,9 +15,55 @@ body {
         body {
             background-color: #f0f8ff;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background-color: #0288D1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        /* Navigation */
+        .topnav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #FFEB3B;
+            padding: 10px;
+            width: 100%;
+            margin-top: 60px; /* Jarak agar tidak bertumpuk dengan header */
+        }
+
+        .topnav a {
+            color: #4F959D;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Form Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-top: 80px; /* Memberi ruang agar formulir tidak tertutup header */
         }
 
         .form-container {
@@ -126,23 +121,38 @@ body {
 </head>
 <body>
 
-    <div class="form-container">
-        <h2>Formulir Kontak</h2>
-        <form id="contactForm">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">No. HP:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
-
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Kirim</button>
-            <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
-        </form>
+    <!-- Header -->
+    <div class="header">
+        <h1>Perpustakaan AGENGHN</h1>
     </div>
 
+    <!-- Navigation -->
+    <div class="topnav">
+        <a href="aboutme.html">ABOUT ME</a>
+        <a href="index.html">HOME PAGE</a>
+    </div>
+
+    <!-- Formulir -->
+    <div class="container">
+        <div class="form-container">
+            <h2>Formulir Kontak</h2>
+            <form id="contactForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">No. HP:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Kirim</button>
+                <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk menangani pengiriman form -->
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Mencegah halaman refresh setelah submit
