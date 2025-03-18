@@ -1,19 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const rainContainer = document.querySelector(".rain");
-    
-    function createRaindrop() {
-        const drop = document.createElement("div");
-        drop.classList.add("drop");
-        
-        drop.style.left = Math.random() * 100 + "vw";
-        drop.style.animationDuration = (Math.random() * 1.5 + 0.5) + "s";
-        
-        rainContainer.appendChild(drop);
-        
-        setTimeout(() => {
-            drop.remove();
-        }, 2000);
+    const header = document.querySelector(".header");
+    const text = "Selamat Datang di Website Kami";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            header.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100);
+        }
     }
     
-    setInterval(createRaindrop, 100);
+    header.innerHTML = ""; // Kosongkan header sebelum mengetik
+    typeEffect();
 });
