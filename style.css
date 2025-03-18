@@ -139,10 +139,10 @@ p {
             background-color: #034f84;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 5px 0;
             position: fixed;
             bottom: 0;
-            width: 90%;
+            width: 100%;
         }
         .footer a {
             color: #f1c40f;
