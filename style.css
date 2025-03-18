@@ -5,9 +5,9 @@
 
 body {
   margin: 0;
+  background-color: #b7d7e8;
 }
-
-
+      
 .header {
   background-color: #0288D1;
   padding: 10px;
@@ -15,7 +15,6 @@ body {
   font-family: Verdana, sans-serif;
 
 }
-
 
 .topnav {
   overflow: hidden;
@@ -40,12 +39,6 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-
-    
-body {
-  background-color: #b7d7e8;
-}
-      
 h2 {
   color: black;
   font-size: 20px;
@@ -58,12 +51,8 @@ p {
   font-size: 20px;
   text-align: center;  
 }
- body {
-            margin: 0;
-            padding: 0;
-            font-family: verdana, sans-serif;
-        }
-        .footer {
+
+.footer {
             background-color: #034f84;
             color: white;
             text-align: center;
