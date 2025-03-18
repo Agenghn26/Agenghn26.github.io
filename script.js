@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
-    const text = "Selamat Datang di Website";
+    const text = "Selamat Datang di Website Saya";
     let index = 0;
 
     function typeEffect() {
