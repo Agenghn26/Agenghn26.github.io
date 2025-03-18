@@ -52,6 +52,28 @@ p {
   text-align: center;  
 }
 
+  table {
+            margin: 20px auto; 
+            border-collapse: collapse;
+            width: 60%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0288D1;
+            color: white;
+        }
+
+
 .footer {
             background-color: #034f84;
             color: white;
