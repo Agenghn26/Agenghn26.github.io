@@ -27,13 +27,13 @@
   method="POST"
 >
                 <label for="email">Email:</label>
-               <input type="nugrohoageng07@gmail.com" name="email">
+               <input type="nugrohoageng07@gmail.com" name="email" pattern="[0-9]{10,15}" placeholder="Masukkan Email Anda" required>
                 
                 <label for="phone">No. HP:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
 
                 <label for="message">Pesan:</label>
-                <textarea name="message"></textarea>
+                <textarea name="message" pattern="[0-9]{10,15}" placeholder="Masukkan pesan yang ingin di ketik" required></textarea>
 
                 <button type="submit">Send</button>
                 <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
