@@ -22,36 +22,25 @@
     <div class="container">
         <div class="form-container">
             <h2>Formulir Kontak</h2>
-            <form id="contactForm">
+            <form
+  action="https://formspree.io/f/mjkykdwv"
+  method="POST"
+>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
+               <input type="nugrohoageng07@gmail.com" name="email">
+                
                 <label for="phone">No. HP:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
 
                 <label for="message">Pesan:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea name="message"></textarea>
 
-                <button type="submit">Kirim</button>
+                <button type="submit">Send</button>
                 <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
             </form>
         </div>
     </div>
-<form
-  action="https://formspree.io/f/mjkykdwv"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="nugrohoageng07@gmail.com" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <button type="submit">Send</button>
-</form>
-    
+
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Mencegah halaman refresh setelah submit
