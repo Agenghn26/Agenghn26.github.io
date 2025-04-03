@@ -42,7 +42,7 @@ body {
 
 /* Menambah efek hover yang lebih menarik */
 .navbar-nav .nav-link:hover {
-    color: #ffcc00; /* Warna highlight saat hover */
+    color: #80ced6; /* Warna highlight saat hover */
 }
 
 /* Responsif di Mobile */
