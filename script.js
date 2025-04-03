@@ -14,3 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     header.innerHTML = ""; // Kosongkan header sebelum mengetik
     typeEffect();
 });
+
+// Toggle Navbar for mobile
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+navbarToggler.addEventListener('click', function() {
+    // Toggle visibility of the navbar collapse
+    navbarCollapse.classList.toggle('show');
+});
