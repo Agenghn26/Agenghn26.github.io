@@ -11,12 +11,21 @@ body {
 /* Navbar Styling */
 .navbar {
     background-color: #87CEEB; /* Sky blue background */
-    padding: 10px 20px;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 70px; /* Prevent content from overlapping with navbar */
 }
 
 .navbar-brand {
     display: flex;
-    align-items: right;
+    align-items: center;
     color: #ffffff;
     font-size: 1.5rem;
     text-decoration: none;
@@ -36,8 +45,8 @@ body {
     filter: invert(1); /* Ensure visibility on light background */
 }
 
-.navbar-nav {
-    margin-left: auto; /* Align pop-down menu to the right */
+.navbar-collapse {
+    justify-content: flex-end; /* Align menu to the right */
 }
 
 .navbar-nav .nav-item {
@@ -58,7 +67,7 @@ body {
 /* Responsive Navbar */
 @media (max-width: 991px) {
     .navbar-collapse {
-        justify-content: flex-end; /* Align dropdown to the right */
+        justify-content: flex-end; /* Ensure dropdown aligns to the right */
     }
     
     .navbar-nav .nav-item {
