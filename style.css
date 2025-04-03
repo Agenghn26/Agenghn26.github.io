@@ -41,6 +41,7 @@ body {
 .navbar-toggler {
     border: none;
     background: none;
+    margin-left: auto; /* Align toggle button to the right */
 }
 
 .navbar-toggler-icon {
@@ -72,6 +73,7 @@ body {
     /* Align navbar-toggler and navbar items properly */
     .navbar-collapse {
         justify-content: flex-start; /* Align dropdown to the left on mobile */
+        padding-left: 0; /* Remove unnecessary padding */
     }
 
     .navbar-nav {
@@ -84,7 +86,7 @@ body {
     .navbar-nav .nav-item {
         width: 100%;
         text-align: left;
-        margin: 10px 0;
+        margin: 0; /* Remove extra margin */
     }
 
     .navbar-nav .nav-link {
@@ -94,15 +96,27 @@ body {
         text-align: left;
     }
 
-    /* Add spacing between navbar items */
-    .navbar-nav .nav-item {
-        margin: 15px 0;
-    }
-    
+    /* Adjust the space around the navbar toggle button */
     .navbar-toggler {
         order: 1; /* Move the toggler to the right on mobile */
     }
+    
+    /* Remove space around the pop-up when it's hidden */
+    .navbar-collapse {
+        display: none;
+    }
+    
+    .navbar-toggler:focus + .navbar-collapse {
+        display: flex; /* Show the navbar items when the button is clicked */
+        position: absolute;
+        top: 70px; /* Position the dropdown directly below the navbar */
+        right: 20px; /* Align to the right of the screen */
+        width: auto; /* Remove extra space */
+        background-color: #87CEEB; /* Sky blue background */
+        border-radius: 5px;
+    }
 }
+
 
 
 h2 {
