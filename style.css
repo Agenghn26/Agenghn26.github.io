@@ -1,121 +1,43 @@
-
 * {
   box-sizing: border-box;
 }
 
-      
-/* Navbar Styling */
-.navbar {
-    background-color: #87CEEB; /* Sky blue background */
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh; /* Ensure body takes at least full screen height */
-    padding-top: 70px; /* Prevent content from overlapping with navbar */
-    font-family: Arial, sans-serif;
-    background-color: #b7d7e8;
+  margin: 0;
 }
 
-/* Navbar Branding */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
+
+.header {
+  background-color: #0288D1;
+  padding: 10px;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+
 }
 
-.navbar-brand img {
-    margin-right: 10px;
+
+.topnav {
+  overflow: hidden;
+  background-color: #daebe8;
+  font-family: Verdana, sans-serif;
 }
 
-.navbar-toggler {
-    border: none;
-    background: none;
-    margin-left: auto; /* Align toggle button to the right */
+
+.topnav a {
+  float: Right;
+  display: block;
+  color: #292F33;
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1); /* Ensure visibility on light background */
+
+.topnav a:hover {
+  background-color: #98D2C0;
+  color: #FFFFFF;
+  font-family: Verdana, sans-serif;
 }
-
-/* Adjust dropdown position on smaller screens */
-.navbar-collapse {
-    justify-content: flex-end; /* Align menu to the right */
-}
-
-.navbar-nav .nav-item {
-    margin-left: 15px;
-}
-
-.navbar-nav .nav-link {
-    color: #ffffff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f8b400; /* Highlight color */
-}
-
-/* Responsive Navbar */
-@media (max-width: 991px) {
-    /* Align navbar-toggler and navbar items properly */
-    .navbar-collapse {
-        justify-content: flex-start; /* Align dropdown to the left on mobile */
-        padding-left: 0; /* Remove unnecessary padding */
-    }
-
-    .navbar-nav {
-        width: 100%; /* Full width for mobile menu */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-nav .nav-item {
-        width: 100%;
-        text-align: left;
-        margin: 0; /* Remove extra margin */
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px;
-        width: 100%;
-        font-size: 1.2rem;
-        text-align: left;
-    }
-
-    /* Adjust the space around the navbar toggle button */
-    .navbar-toggler {
-        order: 1; /* Move the toggler to the right on mobile */
-    }
-    
-    /* Remove space around the pop-up when it's hidden */
-    .navbar-collapse {
-        display: none;
-    }
-    
-    .navbar-toggler:focus + .navbar-collapse {
-        display: flex; /* Show the navbar items when the button is clicked */
-        position: absolute;
-        top: 70px; /* Position the dropdown directly below the navbar */
-        right: 20px; /* Align to the right of the screen */
-        width: auto; /* Remove extra space */
-        background-color: #87CEEB; /* Sky blue background */
-        border-radius: 5px;
-    }
-}
-
 
 
 h2 {
