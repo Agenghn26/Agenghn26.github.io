@@ -43,7 +43,30 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+/* Tambahkan padding untuk konten agar tidak tertutup navbar */
+body {
+    padding-top: 80px; /* Sesuaikan tinggi dengan navbar */
+}
 
+.navbar {
+    background-color: #87CEEB; /* Warna biru langit */
+}
+
+/* Untuk memastikan teks di navbar terlihat baik */
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+}
+
+/* Untuk memastikan navbar muncul secara benar di perangkat mobile */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: center; /* Menu akan rata tengah pada perangkat mobile */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* Spasi antar item menu */
+    }
+}
 
 h2 {
   color: black;
