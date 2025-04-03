@@ -43,37 +43,41 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-/* Mengatur jarak padding dan margin agar navbar lebih besar dan lebih lebar di desktop */
+/* Umum */
 body {
-    padding-top: 80px; /* Memberikan ruang di atas agar tidak tertutup navbar */
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f1f9ff; /* Background biru muda */
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: #87CEEB; /* Warna biru langit */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambah bayangan di bawah navbar untuk efek 3D */
+    background: linear-gradient(45deg, #00aaff, #005577); /* Gradient biru dengan dua tone */
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan di bawah navbar */
 }
 
 .navbar-brand {
-    font-size: 1.8rem; /* Ukuran font lebih besar untuk laptop */
+    font-size: 1.8rem; /* Ukuran font lebih besar */
     font-weight: bold;
+    color: #fff;
 }
 
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Memberikan jarak antar item menu */
+    margin-left: 20px;
 }
 
 .navbar-nav .nav-link {
-    font-size: 1.2rem; /* Menambah ukuran font agar lebih mudah dibaca di laptop */
-    color: #000;
+    font-size: 1.2rem;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
 /* Menambah efek hover yang lebih menarik */
 .navbar-nav .nav-link:hover {
-    color: #f8b400; /* Warna highlight ketika hover */
+    color: #ffcc00; /* Warna highlight saat hover */
 }
 
 /* Responsif di Mobile */
@@ -87,19 +91,43 @@ body {
     }
 }
 
-/* Styling konten utama */
+/* Konten Utama */
 .container-lg {
-    max-width: 1140px; /* Lebar konten lebih besar pada laptop */
-    margin: 0 auto; /* Menjaga konten tetap di tengah */
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Styling untuk footer */
-.footer {
-    background-color: #343a40; /* Warna footer lebih gelap */
-    color: #fff;
-    font-size: 1rem;
+/* Button di Konten */
+.btn-light {
+    background-color: #a3d8ff; /* Warna biru muda untuk tombol */
+    color: #005577;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
+.btn-light:hover {
+    background-color: #007acc; /* Mengubah warna saat hover */
+    color: #fff;
+}
+
+/* Footer Styling */
+.footer {
+    background: #003d5b; /* Biru gelap untuk footer */
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+/* Responsif untuk layar yang lebih kecil */
+@media (max-width: 576px) {
+    .footer {
+        padding: 15px;
+    }
+}
+
 h2 {
   color: black;
   font-size: 20px;
