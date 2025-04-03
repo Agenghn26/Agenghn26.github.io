@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Kontak</title>
-    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -12,54 +12,43 @@
         <h1>Perpustakaan AGENGHN</h1>
     </div>
 
-    
     <div class="topnav">
         <a href="aboutme.html">ABOUT ME</a>
         <a href="index.html">HOME PAGE</a>
     </div>
 
-   
     <div class="container">
         <div class="form-container">
             <h2>Formulir Kontak</h2>
-            <form
-  action="https://formspree.io/f/mjkykdwv"
-  method="POST"
->
+            <form id="contactForm" action="https://formspree.io/f/mjkykdwv" method="POST">
                 <label for="email">Email:</label>
-               <input type="nugrohoageng07@gmail.com" name="email" pattern="[0-9]{10,15}" placeholder="Masukkan Email Anda" required>
-                
+                <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+
                 <label for="phone">No. HP:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Masukkan nomor tanpa spasi" required>
 
                 <label for="message">Pesan:</label>
-                <textarea name="message" pattern="[0-9]{10,15}" placeholder="Masukkan pesan yang ingin di ketik" required></textarea>
+                <textarea name="message" id="message" placeholder="Masukkan pesan yang ingin diketik" required></textarea>
 
                 <button type="submit">Send</button>
-                <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
+                <p class="success-message" id="successMessage" style="display:none;">Pesan berhasil dikirim!</p>
             </form>
         </div>
     </div>
 
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Mencegah halaman refresh setelah submit
-
-            
-            document.getElementById("successMessage").style.display = "block";
-
-            
-            this.reset();
-        });
-        <form id="contactForm" action="https://formspree.io/f/mjkykdwv" method="POST">
-
-    </script>
-    
-      <footer class="footer">
+    <footer class="footer">
         <p><b>&copy; 2025 Perpustakaan AgengHN. All Rights Reserved.</b></p>
-        <div>
-        </div>
     </footer>
 
+    <script>
+        // Menambahkan event listener pada formulir untuk menampilkan pesan sukses setelah submit
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah refresh halaman setelah submit
+            // Menampilkan pesan sukses
+            document.getElementById('successMessage').style.display = 'block';
+            // Reset form setelah pengiriman
+            this.reset();
+        });
+    </script>
 </body>
 </html>
