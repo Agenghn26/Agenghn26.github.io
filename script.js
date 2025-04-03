@@ -15,12 +15,3 @@ document.addEventListener("DOMContentLoaded", function () {
     typeEffect();
 });
 
-// Navbar color change on scroll
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = "#3b4c64"; // Darker color after scroll
-    } else {
-        navbar.style.backgroundColor = "#87CEEB"; // Original color when at the top
-    }
-});
