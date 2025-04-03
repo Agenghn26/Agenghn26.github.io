@@ -21,8 +21,10 @@ body {
 
 body {
     padding-top: 70px; /* Prevent content from overlapping with navbar */
+    font-family: Arial, sans-serif;
 }
 
+/* Navbar Branding */
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -45,6 +47,7 @@ body {
     filter: invert(1); /* Ensure visibility on light background */
 }
 
+/* Adjust dropdown position on smaller screens */
 .navbar-collapse {
     justify-content: flex-end; /* Align menu to the right */
 }
@@ -66,14 +69,41 @@ body {
 
 /* Responsive Navbar */
 @media (max-width: 991px) {
+    /* Align navbar-toggler and navbar items properly */
     .navbar-collapse {
-        justify-content: flex-end; /* Ensure dropdown aligns to the right */
+        justify-content: flex-start; /* Align dropdown to the left on mobile */
     }
-    
+
+    .navbar-nav {
+        width: 100%; /* Full width for mobile menu */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .navbar-nav .nav-item {
+        width: 100%;
+        text-align: left;
         margin: 10px 0;
     }
+
+    .navbar-nav .nav-link {
+        padding: 10px;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    /* Add spacing between navbar items */
+    .navbar-nav .nav-item {
+        margin: 15px 0;
+    }
+    
+    .navbar-toggler {
+        order: 1; /* Move the toggler to the right on mobile */
+    }
 }
+
 
 h2 {
   color: black;
