@@ -10,7 +10,7 @@ body {
       
 /* Navbar Styling */
 .navbar {
-    background-color: #343a40; /* Dark background */
+    background-color: #87CEEB; /* Sky blue background */
     padding: 10px 20px;
 }
 
@@ -36,6 +36,10 @@ body {
     background-color: white;
 }
 
+.navbar-nav {
+    margin-left: auto; /* Align pop-down menu to the right */
+}
+
 .navbar-nav .nav-item {
     margin-left: 15px;
 }
@@ -54,13 +58,14 @@ body {
 /* Responsive Navbar */
 @media (max-width: 991px) {
     .navbar-nav {
-        text-align: center;
+        text-align: right; /* Align dropdown to the right */
     }
     
     .navbar-nav .nav-item {
         margin: 10px 0;
     }
 }
+
 
 h2 {
   color: black;
