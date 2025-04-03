@@ -10,14 +10,14 @@ body {
       
 /* Navbar Styling */
 .navbar {
-    background-color: #87CEEB; /* Sky blue background */
+    background-color: #034f84; /* Sky blue background */
     padding: 10px 20px;
 }
 
 .navbar-brand {
     display: flex;
-    align-items: center;
-    color: #ffffff;
+    align-items: right;
+    color: #87bdd8;
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: bold;
