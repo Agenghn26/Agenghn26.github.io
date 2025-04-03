@@ -16,8 +16,6 @@
 }
 
 body {
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
     font-family: Arial, sans-serif;
     min-height: 100vh; /* Ensure body takes at least full screen height */
     padding-top: 70px; /* Prevent content from overlapping with navbar */
