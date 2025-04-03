@@ -15,25 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     typeEffect();
 });
 
-// Modal Popup Effect
-const modal = document.createElement('div');
-modal.innerHTML = `
-    <div id="modal" class="modal-overlay">
-        <div class="modal-content">
-            <h2>Welcome to Perpustakaan AgengHN!</h2>
-            <p>This is a simple modal popup that provides additional information.</p>
-            <button id="closeModal" class="btn">Close</button>
-        </div>
-    </div>
-`;
-document.body.appendChild(modal);
-
-const closeModal = document.getElementById('closeModal');
-closeModal.addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
+// Navbar color change on scroll
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = "#3b4c64"; // Darker color after scroll
+    } else {
+        navbar.style.backgroundColor = "#87CEEB"; // Original color when at the top
+    }
 });
-
-// Show modal on page load (you can remove this line to make modal triggered by a button)
-window.onload = () => {
-    document.getElementById('modal').style.display = 'flex';
-};
