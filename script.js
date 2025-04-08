@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".header");
+    const header = document.querySelector(".h1");
     const text = "Selamat Datang di Website Saya";
     let index = 0;
 
