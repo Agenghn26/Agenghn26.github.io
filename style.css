@@ -132,7 +132,8 @@ p {
             justify-content: center;
             align-items: center;
             height: 100%;
-            margin-top: 80px; 
+            margin-top: 80px;
+            color: #daebe8;
         }
 
         .form-container {
