@@ -13,8 +13,8 @@
       background-color: #f1f9ff;
     }
 
-    .navbar {
-      background-color: #1f3c88;
+    .navbar, .footer {
+      background-color: #0e5ba3; /* biru laut */
     }
 
     .navbar-brand {
@@ -25,15 +25,17 @@
     .navbar-nav .nav-link {
       color: #ffffff !important;
       margin-left: 15px;
+      font-size: 0.9rem; /* Ukuran lebih kecil */
     }
 
     .hero-section {
       background-image: url('https://capicstorage.blob.core.windows.net/shared/myconsultant/webimages/1077-half.jpg');
       background-size: cover;
       background-position: center;
-      color: white;
+      color: #ffffff;
       padding: 100px 0;
       text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     .hero-section h1 {
@@ -64,10 +66,13 @@
     }
 
     .footer {
-      background-color: #1f3c88;
       color: white;
       text-align: center;
       padding: 15px;
+    }
+
+    .footer b {
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -80,8 +85,8 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home Page</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -112,7 +117,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p><b>&copy; 2025 Perpustakaan AgengHN. All Rights Reserved.</b></p>
+    <p><b>&copy; 2025 Perpustakaan AgengHN.</b></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
